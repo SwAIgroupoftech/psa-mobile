@@ -1,0 +1,53 @@
+# PSA Mobile App - Python Requirements
+# Install with: pip install -r requirements_mobile.txt
+
+# ============================================================================
+#   KIVY FRAMEWORK (Mobile UI)
+# ============================================================================
+kivymd==1.1.1
+Pillow>=9.5.0
+
+
+
+# ============================================================================
+#   MOBILE-SPECIFIC (Optional)
+# ============================================================================
+# These provide native mobile features via Python
+
+plyer>=2.1.0           # Notifications, TTS, vibration, etc.
+pyjnius>=1.5.0         # Android Java bridge (auto-installed by buildozer)
+pyobjus>=1.2.0         # iOS Objective-C bridge (auto-installed)
+
+# ============================================================================
+#   BUILD TOOLS
+# ============================================================================
+buildozer>=1.5.0       # Android APK builder
+cython==0.29.33        # Required by buildozer
+# kivy-ios (for iOS, install separately on macOS)
+
+# ============================================================================
+#   DEVELOPMENT TOOLS
+# ============================================================================
+black>=23.0.0          # Code formatter
+pytest>=7.4.0          # Testing
+
+# ============================================================================
+#   NOTES
+# ============================================================================
+# 1. Install Kivy first:
+#    pip install kivy[base]==2.2.1 kivymd==1.1.1
+#
+# 2. Then install rest:
+#    pip install -r requirements_mobile.txt
+#
+# 3. For Android builds:
+#    pip install buildozer
+#
+# 4. For iOS builds (macOS only):
+#    pip install kivy-ios
+#
+# 5. Test on desktop first:
+#    python mobile_app_main.py
+#
+# 6. Build Android:
+#    buildozer android debug
